@@ -1,17 +1,15 @@
 import { View, Text, Image } from 'react-native'
 import React, { useState } from 'react'
-import manFull from '../../assets/images/man-full.png'
+import manFull from '../assets/images/man-full.png'
 // import * as Icon from 'react-native-feather'
 import Slick from 'react-native-slick';
 
-const IntroDuction = () => {
+const IntroDuction = ({ navigation }) => {
     const [page, setPage] = useState(0)
     const handlePage = (value, total) => {
         setPage(value)
         if (value == total) {
-            console.log('true')
-        } else {
-            console.log('false')
+            navigation.navigate('city-select')
         }
     }
     return (
