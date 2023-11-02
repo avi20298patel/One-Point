@@ -4,7 +4,7 @@ import React from 'react'
 export default function Otp() {
     return (
         <View>
-            <Text>Otp</Text>
+            <Text>Otp 1</Text>
         </View>
     )
 }
