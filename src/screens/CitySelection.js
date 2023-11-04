@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import DropDown from '../components/Global/DropDown';
-import SubmitButton from '../components/Global/Button';
-
+import DynamicButton from '../components/Global/DynamicButton';
 
 const data = [
     { label: 'Item 1', value: '1' },
@@ -26,24 +25,24 @@ const CitySelection = ({ navigation }) => {
                 />
             </View>
             <View className="mt-20">
-                <Text className="text-primary uppercase font-medium text-4xl text-center">Select Your City</Text>
+                <Text className="text-primary uppercase  font-medium text-4xl text-center">Select Your City</Text>
                 <View className="my-5">
                     <DropDown
                         value={value}
                         setValue={setValue}
                         values={data}
+                        dropdownStyle="w-full border-gray border px-4 py-4"
                     />
                 </View>
                 <Text className="text-center text-4xl text-neutral-600 font-extralight mb-10">Select Your City to{"\n"}Get Started</Text>
             </View>
-            <View>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Login')}
-                    className="bg-primary p-2 rounded-lg w-full hover:shadow-2xl hover:shadow-red-700 mx-auto"
-                >
-                    <Text className="text-2xl text-center text-white">Select & Proceed</Text>
-                </TouchableOpacity>
-            </View>
+
+            <DynamicButton
+                btnText="Select & Proceed"
+                navigation={navigation}
+                navigatingText="Login"
+                wrapperClass="mt-10"
+            />
         </View>
     );
 };

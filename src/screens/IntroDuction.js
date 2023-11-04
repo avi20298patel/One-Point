@@ -13,8 +13,22 @@ const IntroDuction = ({ navigation }) => {
         }
     }
     return (
-
-        <Slick showsButtons={true} renderPagination={(index, total) => handlePage(index + 1, total)}>
+        <Slick
+            showsButtons={true}
+            renderPagination={(index, total) => handlePage(index + 1, total)}
+            nextButton={<Text className="text-lg font-bold" >Next</Text>}
+            prevButton={<Text className="hidden">Prev</Text>}
+            buttonWrapperStyle={{
+                flexDirection: 'row', flex: 1, paddingHorizontal: 20, paddingVertical: 30, justifyContent: 'space-between', alignItems: 'flex-end'
+            }}
+            showsPagination
+            dot={<View style={{ backgroundColor: 'rgba(0,0,0,.2)', width: 8, height: 8, borderRadius: 4, marginLeft: 3, marginRight: 3, marginTop: 3, marginBottom: 3, }} />}
+            activeDot={<View style={{ backgroundColor: '#007aff', width: 8, height: 8, borderRadius: 4, marginLeft: 3, marginRight: 3, marginTop: 3, marginBottom: 3, }} />}
+        // dotStyle=""
+        // dotColor=''
+        // activeDotColor=''
+        // activeDotStyle=''
+        >
             <View className="item text-center ">
                 <Image
                     className="rounded-2xl"

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import DropDown from '../components/Global/DropDown';
 import * as Icon from 'react-native-feather'
+import DynamicButton from '../components/Global/DynamicButton';
 const data = [
     { label: '+93', value: '+93' },
     { label: '+355', value: '+355' },
@@ -25,17 +26,19 @@ const Login = ({ navigation }) => {
                             value={value}
                             setValue={setValue}
                             values={data}
+                            dropdownStyle="w-20 border-none"
+                            isIcon="hidden"
                         />
-                        <TextInput placeholder='Enter Phone Number' className="ml-3 flex-1" />
+                        <TextInput placeholder='Enter Phone Number' className="" />
                     </View>
                 </View>
             </View>
-            <View className="">
-                <TouchableOpacity className="mt-52 bg-primary p-2 rounded-lg" onPress={() => navigation.navigate('Otp')}              >
-                    <Text className="text-white text-2xl text-center">Get OTP</Text>
-                </TouchableOpacity>
-                <Text className="text-center mt-4">Need Help?</Text>
-            </View>
+            <DynamicButton
+                btnText="Get OTP"
+                navigation={navigation}
+                navigatingText="Otp"
+                isHelp={true}
+            />
         </View>
     );
 };
