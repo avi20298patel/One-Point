@@ -25,12 +25,12 @@ export default function Navigation() {
                 <Stack.Screen name="city-select" component={CitySelection} />
                 <Stack.Screen name="Otp" component={Otp} />
                 <Stack.Screen name="welcome-screen" component={WelcomeProfile} />
-                <Stack.Screen name="basic-info" component={BasicInfo} />
-                <Stack.Screen name="service-list" component={ServicesList} />
-                <Stack.Screen name="sub-service" component={SubServices} />
-                <Stack.Screen name="service-cart" component={ServiceCart} />
-                <Stack.Screen name="address" component={Address} />
-                <Stack.Screen name="kyc" component={Kyc} />
+                <Stack.Screen name="basic-info" component={BasicInfo} options={{ headerTitle: 'Basic Information', headerShown: true, headerBackVisible: false, headerTransparent: true, headerTitleAlign: 'center' }} />
+                <Stack.Screen name="service-list" component={ServicesList} options={{ headerTitle: 'Select Your Services', headerShown: true, headerBackVisible: true, headerTransparent: true, headerTitleAlign: 'center' }} />
+                <Stack.Screen name="sub-service" component={SubServices} options={{ headerTitle: 'Add Your Service', headerShown: true, headerBackVisible: true, headerTransparent: true, headerTitleAlign: 'center' }} />
+                <Stack.Screen name="service-cart" component={ServiceCart} options={{ headerTitle: 'Selected Service', headerShown: true, headerBackVisible: true, headerTransparent: true, headerTitleAlign: 'center' }} />
+                <Stack.Screen name="address" component={Address} options={{ headerTitle: 'Add Your Address', headerShown: true, headerBackVisible: true, headerTransparent: true, headerTitleAlign: 'center' }} />
+                <Stack.Screen name="kyc" component={Kyc} options={{ headerTitle: 'KYC Information', headerShown: true, headerBackVisible: true, headerTransparent: true, headerTitleAlign: 'center' }} />
             </Stack.Navigator>
         </NavigationContainer>
     )
