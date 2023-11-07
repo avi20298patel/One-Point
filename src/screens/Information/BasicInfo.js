@@ -1,6 +1,6 @@
 import { View, Text, Image, TextInput } from 'react-native'
 import React, { useCallback, useState } from 'react'
-import DynamicButton from '../../components/Global/DynamicButton'
+import DynamicButton from '../../components/Global/Form/DynamicButton'
 // import DocumentPicker from "react-native-document-picker";
 
 export default function BasicInfo({ navigation }) {
@@ -23,7 +23,7 @@ export default function BasicInfo({ navigation }) {
                     <View className="w-[180px] h-[180px] border rounded-full border-gray-300">
                         <Image source={require('../../assets/images/bikeGuy.png')} className="w-[180px] h-[180px] " />
                     </View>
-                    {fileResponse.map((file, index) => (
+                    {/* {fileResponse.map((file, index) => (
                         <Text
                             key={index.toString()}
                             style={styles.uri}
@@ -31,7 +31,7 @@ export default function BasicInfo({ navigation }) {
                             ellipsizeMode={'middle'}>
                             {file?.uri}
                         </Text>
-                    ))}
+                    ))} */}
                     <Text className='text-xl font-bold' onPress={handleDocumentSelection}>Upload Profile</Text>
                 </View>
                 <TextInput placeholder='Enter Phone Number' keyboardType="numeric" className="p-3 m-2 rounded-lg border border-gray-300" />
@@ -43,7 +43,7 @@ export default function BasicInfo({ navigation }) {
             <DynamicButton
                 btnText="Next"
                 navigation={navigation}
-                navigatingText="service-list"
+                navigatingText="address"
                 wrapperClass="mt-10"
             />
         </View>

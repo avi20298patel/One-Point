@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import DropDown from '../components/Global/DropDown';
+import DropDown from '../components/Global/Form/DropDown';
 import * as Icon from 'react-native-feather'
-import DynamicButton from '../components/Global/DynamicButton';
+import DynamicButton from '../components/Global/Form/DynamicButton';
 const data = [
     { label: '+93', value: '+93' },
     { label: '+355', value: '+355' },

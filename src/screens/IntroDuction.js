@@ -5,9 +5,9 @@ import manFull from '../assets/images/man-full.png'
 import Slick from 'react-native-slick';
 
 const IntroDuction = ({ navigation }) => {
-    const [page, setPage] = useState(0)
+    // const [page, setPage] = useState(0)
     const handlePage = (value, total) => {
-        setPage(value)
+        // setPage(value)
         if (value == total) {
             navigation.navigate('city-select')
         }
@@ -41,7 +41,7 @@ const IntroDuction = ({ navigation }) => {
                 </Text>
 
                 <Text className=" text-red-600 font-bold">
-                    {page}
+                    1
                 </Text>
             </View>
             <View className="item text-center ">
@@ -56,7 +56,7 @@ const IntroDuction = ({ navigation }) => {
                 </Text>
 
                 <Text className=" text-red-600 font-bold">
-                    {page}
+                    2
                 </Text>
             </View>
             <View className="item text-center ">
@@ -71,7 +71,7 @@ const IntroDuction = ({ navigation }) => {
                 </Text>
 
                 <Text className=" text-red-600 font-bold">
-                    {page}
+                    3
                 </Text>
             </View>
         </Slick>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Image } from 'react-native';
-import DropDown from '../components/Global/DropDown';
-import DynamicButton from '../components/Global/DynamicButton';
+import DropDown from '../components/Global/Form/DropDown';
+import DynamicButton from '../components/Global/Form/DynamicButton';
 
 const data = [
     { label: 'Item 1', value: '1' },

@@ -3,7 +3,7 @@ import React from 'react'
 import * as Icon from 'react-native-feather'
 import { TextInput } from 'react-native'
 import { TouchableOpacity } from 'react-native'
-import DynamicButton from '../components/Global/DynamicButton'
+import DynamicButton from '../components/Global/Form/DynamicButton'
 
 export default function Otp({ navigation }) {
     return (
