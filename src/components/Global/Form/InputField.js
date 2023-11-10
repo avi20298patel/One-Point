@@ -2,13 +2,14 @@ import { View, Text, TextInput } from 'react-native'
 import React from 'react'
 
 export default function InputField(props) {
-    const { styles, onFocus, onChange, onChangeText, onKeyPress, onScroll, onSelectionChange, label, placeholder, value, keyboardType, editable, multiline, numberOfLines, maxLength,
+    const { containerClass, className, styles, onFocus, onChange, onChangeText, onKeyPress, onScroll, onSelectionChange, label, placeholder, value, keyboardType, editable, multiline, numberOfLines, maxLength,
         autoCapitalize, autoComplete, autoCorrect, autoFocus, caretHidden, clearButtonMode, clearTextOnFocus, contextMenuHidden,
         dataDetectorTypes, defaultValue, cursorColor, disableFullscreenUI, enablesReturnKeyAutomatically, enterKeyHint,
         inlineImageLeft, inlineImagePadding, inputMode, readOnly, textAlign } = props
     return (
-        <View>
+        <View className={containerClass && "flex-row flex-1 items-center p-3 rounded-lg border border-gray-300"}>
             <TextInput
+                className={className}
                 editable={editable}
                 multiline={multiline}
                 numberOfLines={numberOfLines}

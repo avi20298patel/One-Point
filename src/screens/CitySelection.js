@@ -28,10 +28,11 @@ const CitySelection = ({ navigation }) => {
                 <Text className="text-primary uppercase  font-medium text-4xl text-center">Select Your City</Text>
                 <View className="my-5">
                     <DropDown
+                        placeholder='Select item'
                         value={value}
                         setValue={setValue}
                         values={data}
-                        dropdownStyle="w-full border-gray border px-4 py-4"
+                        dropdownStyle="p-5 py-6 m-2 rounded-lg border border-gray-300"
                     />
                 </View>
                 <Text className="text-center text-4xl text-neutral-600 font-extralight mb-10">Select Your City to{"\n"}Get Started</Text>
@@ -41,7 +42,7 @@ const CitySelection = ({ navigation }) => {
                 btnText="Select & Proceed"
                 navigation={navigation}
                 navigatingText="Login"
-                wrapperClass="mt-10"
+                wrapperClass="mb-5"
             />
         </View>
     );

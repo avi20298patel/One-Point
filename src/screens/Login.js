@@ -3,16 +3,9 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import DropDown from '../components/Global/Form/DropDown';
 import * as Icon from 'react-native-feather'
 import DynamicButton from '../components/Global/Form/DynamicButton';
-const data = [
-    { label: '+93', value: '+93' },
-    { label: '+355', value: '+355' },
-    { label: '+213', value: '+213' },
-    { label: '+61', value: '+61' },
-    { label: '+91', value: '+91' },
-    { label: '+32', value: '+32' },
-    { label: '+55', value: '+55' },
-    { label: '+226', value: '+226' },
-];
+import { countryCodes } from '../utils/data/helpers';
+import InputField from '../components/Global/Form/InputField'
+
 const Login = ({ navigation }) => {
     const [value, setValue] = useState('+91');
     return (
@@ -25,11 +18,11 @@ const Login = ({ navigation }) => {
                         <DropDown
                             value={value}
                             setValue={setValue}
-                            values={data}
+                            values={countryCodes}
                             dropdownStyle="w-20 border-none"
                             isIcon="hidden"
                         />
-                        <TextInput placeholder='Enter Phone Number' className="" />
+                        <InputField containerClass={false} placeholder='Enter Phone Number' className="text-lg text-primary" keyboardType="numeric" />
                     </View>
                 </View>
             </View>
