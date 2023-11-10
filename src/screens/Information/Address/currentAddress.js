@@ -1,28 +1,9 @@
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
-import DynamicButton from '../../../components/Global/Form/DynamicButton'
+import React from 'react'
 import DropDown from '../../../components/Global/Form/DropDown'
-
-
-const data1 = [
-    { label: 'Male', value: '1' },
-    { label: 'Female', value: '2' },
-    { label: 'Others', value: '3' },
-];
-
-
-const data2 = [
-    { label: 'Male', value: '1' },
-    { label: 'Female', value: '2' },
-    { label: 'Others', value: '3' },
-];
-
+import { citiesData, statesData } from '../../../utils/data/helpers';
 
 export default function CurrentAddress({ setIndex, address, setAddress }) {
-
-    const [city, setCity] = useState('');
-    const [state, setState] = useState('');
-
     const handleTabChange = () => {
         setIndex(1)
     }
@@ -37,8 +18,7 @@ export default function CurrentAddress({ setIndex, address, setAddress }) {
                     placeholder='City'
                     value={address?.city}
                     setValue={(value) => setAddress({ ...address, city: value })}
-                    // setValue={setCity}
-                    values={data1}
+                    values={citiesData}
                     dropdownStyle="p-5 py-6 m-2 rounded-lg border border-gray-300"
                 />
                 <DropDown
@@ -46,8 +26,7 @@ export default function CurrentAddress({ setIndex, address, setAddress }) {
                     placeholder='State'
                     value={address?.state}
                     setValue={(value) => setAddress({ ...address, state: value })}
-                    // setValue={setState}
-                    values={data2}
+                    values={statesData}
                     dropdownStyle="p-5 py-6 m-2 rounded-lg border border-gray-300"
                 />
                 <TextInput value={address?.pincode} onChangeText={(value) => setAddress({ ...address, pincode: value })} textAlign='center' placeholder='Pin Code' className="p-3 m-2 rounded-lg border border-gray-300" keyboardType='numeric' maxLength={4} />

@@ -1,28 +1,11 @@
 import { View, Text, TextInput } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import DynamicButton from '../../../components/Global/Form/DynamicButton'
 import DropDown from '../../../components/Global/Form/DropDown'
-// import CheckBox from '@react-native-community/checkbox';
 import CheckBox from 'expo-checkbox';
-
-
-const data1 = [
-    { label: 'Male', value: '1' },
-    { label: 'Female', value: '2' },
-    { label: 'Others', value: '3' },
-];
-
-
-const data2 = [
-    { label: 'Male', value: '1' },
-    { label: 'Female', value: '2' },
-    { label: 'Others', value: '3' },
-];
+import { citiesData, statesData } from '../../../utils/data/helpers';
 
 export default function PermanentAddress({ navigation, address }) {
-
-    const [city, setCity] = useState('');
-    const [state, setState] = useState('');
     const [isSelected, setSelection] = useState(false);
     const [perAddress, setPerAddress] = useState({
         "address1": "",
@@ -64,7 +47,7 @@ export default function PermanentAddress({ navigation, address }) {
                     placeholder='City'
                     value={perAddress?.city}
                     setValue={(value) => setPerAddress({ ...perAddress, city: value })}
-                    values={data1}
+                    values={citiesData}
                     dropdownStyle="p-5 py-6 m-2 rounded-lg border border-gray-300"
                 />
                 <DropDown
@@ -72,7 +55,7 @@ export default function PermanentAddress({ navigation, address }) {
                     placeholder='State'
                     value={perAddress?.state}
                     setValue={(value) => setPerAddress({ ...perAddress, state: value })}
-                    values={data2}
+                    values={statesData}
                     dropdownStyle="p-5 py-6 m-2 rounded-lg border border-gray-300"
                 />
                 <TextInput value={perAddress?.pincode} onChangeText={(value) => setPerAddress({ ...perAddress, pincode: value })} textAlign='center' placeholder='Pin Code' className="p-3 m-2 rounded-lg border border-gray-300" keyboardType='numeric' maxLength={4} />

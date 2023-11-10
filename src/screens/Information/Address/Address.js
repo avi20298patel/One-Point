@@ -1,6 +1,6 @@
-import { View, Text, useWindowDimensions } from 'react-native'
+import { Text, useWindowDimensions } from 'react-native'
 import React, { useState } from 'react'
-import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
+import { TabBar, TabView } from 'react-native-tab-view';
 import CurrentAddress from './currentAddress';
 import PermanentAddress from './permanentAddress';
 
