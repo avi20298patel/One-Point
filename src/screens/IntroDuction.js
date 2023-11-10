@@ -1,13 +1,10 @@
 import { View, Text, Image } from 'react-native'
 import React, { useState } from 'react'
 import manFull from '../assets/images/man-full.png'
-// import * as Icon from 'react-native-feather'
 import Slick from 'react-native-slick';
 
 const IntroDuction = ({ navigation }) => {
-    const [page, setPage] = useState(0)
     const handlePage = (value, total) => {
-        setPage(value)
         if (value == total) {
             navigation.navigate('city-select')
         }
@@ -24,10 +21,6 @@ const IntroDuction = ({ navigation }) => {
             showsPagination
             dot={<View style={{ backgroundColor: 'rgba(0,0,0,.2)', width: 8, height: 8, borderRadius: 4, marginLeft: 3, marginRight: 3, marginTop: 3, marginBottom: 3, }} />}
             activeDot={<View style={{ backgroundColor: '#007aff', width: 8, height: 8, borderRadius: 4, marginLeft: 3, marginRight: 3, marginTop: 3, marginBottom: 3, }} />}
-        // dotStyle=""
-        // dotColor=''
-        // activeDotColor=''
-        // activeDotStyle=''
         >
             <View className="item text-center ">
                 <Image
@@ -41,7 +34,7 @@ const IntroDuction = ({ navigation }) => {
                 </Text>
 
                 <Text className=" text-red-600 font-bold">
-                    {page}
+                    1
                 </Text>
             </View>
             <View className="item text-center ">
@@ -56,7 +49,7 @@ const IntroDuction = ({ navigation }) => {
                 </Text>
 
                 <Text className=" text-red-600 font-bold">
-                    {page}
+                    2
                 </Text>
             </View>
             <View className="item text-center ">
@@ -71,7 +64,7 @@ const IntroDuction = ({ navigation }) => {
                 </Text>
 
                 <Text className=" text-red-600 font-bold">
-                    {page}
+                    3
                 </Text>
             </View>
         </Slick>

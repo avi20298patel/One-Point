@@ -3,24 +3,24 @@ import React, { useState } from 'react'
 import { Dropdown } from 'react-native-element-dropdown';
 import * as Icon from 'react-native-feather'
 
-export default function DropDown({ values, value, setValue, dropdownStyle, isIcon }) {
+export default function DropDown(props) {
     // const [isFocus, setIsFocus] = useState(false);
-
+    const { values, value, setValue, dropdownStyle, isIcon, search, placeholder } = props
     return (
         <View>
             {/* {renderLabel()} */}
             <Dropdown
-                className={`${dropdownStyle} h-10`}
-                placeholderStyle={{ fontSize: 18 }}
-                selectedTextStyle={{ fontSize: 18 }}
+                className={`${dropdownStyle} h-10 `}
+                placeholderStyle={{ fontSize: 18, textAlign: 'center' }}
+                selectedTextStyle={{ fontSize: 18, textAlign: 'center' }}
                 inputSearchStyle={{ fontSize: 18, height: 45 }}
                 iconStyle={styles.iconStyle}
                 data={values}
-                search
+                search={search}
                 maxHeight={300}
                 labelField="label"
                 valueField="value"
-                placeholder={'Select item'}
+                placeholder={placeholder}
                 searchPlaceholder="Search..."
                 value={value}
                 // onFocus={() => setIsFocus(true)}
@@ -30,7 +30,7 @@ export default function DropDown({ values, value, setValue, dropdownStyle, isIco
                     // setIsFocus(false);
                 }}
                 renderRightIcon={() => (
-                    <Icon.ChevronDown className={`${isIcon}`} stroke={'gray'} />
+                    <Icon.ChevronDown className={`${isIcon}`} stroke={'red'} fill="#fff" width={32} height={32} strokeWidth={2} />
                 )}
             />
         </View>

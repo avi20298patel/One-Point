@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import DynamicButton from '../../../components/Global/DynamicButton'
+import DynamicButton from '../../../components/Global/Form/DynamicButton'
 
 export default function ServicesList({ navigation }) {
     return (
