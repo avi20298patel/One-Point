@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "native-wind@awesome-proj",
-    "slug": "native-wind@awesome-proj",
+    "name": "onepoint2.o",
+    "slug": "one-point",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.avinashexpo.onepoint"
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "18ed75fc-a61b-4754-ad52-80b078ab776c"
+      }
+    },
+    "owner": "avinashexpo"
   }
 }
