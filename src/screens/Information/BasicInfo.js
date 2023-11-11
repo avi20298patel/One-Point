@@ -56,6 +56,7 @@ export default function BasicInfo({ navigation }) {
                     value={value}
                     setValue={setValue}
                     values={data}
+                    placeholderStyle={{ textAlign: 'center' }}
                     dropdownStyle="p-5 py-6 m-2 rounded-lg border border-gray-300"
                 />
             </View>

@@ -45,3 +45,15 @@ export const statesData = [
     { label: 'Arizona', value: 'AZ' },
 ];
 
+export const introCarousalData = [
+    {
+        image: '../assets/images/man-full.png'
+    },
+    {
+        image: '../assets/images/namaste.png'
+    },
+    {
+        image: '../assets/images/fullStart.png'
+    }
+]
+
