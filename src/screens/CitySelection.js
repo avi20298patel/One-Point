@@ -2,17 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Image } from 'react-native';
 import DropDown from '../components/Global/Form/DropDown';
 import DynamicButton from '../components/Global/Form/DynamicButton';
-
-const data = [
-    { label: 'Item 1', value: '1' },
-    { label: 'Item 2', value: '2' },
-    { label: 'Item 3', value: '3' },
-    { label: 'Item 4', value: '4' },
-    { label: 'Item 5', value: '5' },
-    { label: 'Item 6', value: '6' },
-    { label: 'Item 7', value: '7' },
-    { label: 'Item 8', value: '8' },
-];
+import { citiesData } from '../utils/data/helpers';
 
 const CitySelection = ({ navigation }) => {
     const [value, setValue] = useState('');
@@ -28,10 +18,10 @@ const CitySelection = ({ navigation }) => {
                 <Text className="text-primary uppercase  font-medium text-4xl text-center">Select Your City</Text>
                 <View className="my-5">
                     <DropDown
-                        placeholder='Select item'
+                        placeholder='Select Your City'
                         value={value}
                         setValue={setValue}
-                        values={data}
+                        values={citiesData}
                         dropdownStyle="p-5 py-6 m-2 rounded-lg border border-gray-300"
                     />
                 </View>

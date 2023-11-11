@@ -39,26 +39,28 @@ export default function PermanentAddress({ navigation, address }) {
                     />
                     <Text className="ml-2">Same as Current Address</Text>
                 </View>
-                <TextInput value={perAddress?.address1} textAlign='center' placeholder='First Address Line' className="p-3 m-2 rounded-lg border border-gray-300" />
-                <TextInput value={perAddress?.address2} textAlign='center' placeholder='Second Address Line' className="p-3 m-2 rounded-lg border border-gray-300" />
-                <TextInput value={perAddress?.landmark} textAlign='center' placeholder='Landmark' className="p-3 m-2 rounded-lg border border-gray-300" />
+                <TextInput value={perAddress?.address1} textAlign='center' placeholder='First Address Line' className="p-3 m-2 rounded-sm border border-gray" />
+                <TextInput value={perAddress?.address2} textAlign='center' placeholder='Second Address Line' className="p-3 m-2 rounded-sm border border-gray" />
+                <TextInput value={perAddress?.landmark} textAlign='center' placeholder='Landmark' className="p-3 m-2 rounded-sm border border-gray" />
                 <DropDown
                     textAlign='center'
                     placeholder='City'
+                    placeholderStyle={{ textAlign: 'center' }}
                     value={perAddress?.city}
                     setValue={(value) => setPerAddress({ ...perAddress, city: value })}
                     values={citiesData}
-                    dropdownStyle="p-5 py-6 m-2 rounded-lg border border-gray-300"
+                    dropdownStyle="p-5 py-6 m-2 rounded-sm border border-gray"
                 />
                 <DropDown
                     textAlign='center'
                     placeholder='State'
+                    placeholderStyle={{ textAlign: 'center' }}
                     value={perAddress?.state}
                     setValue={(value) => setPerAddress({ ...perAddress, state: value })}
                     values={statesData}
-                    dropdownStyle="p-5 py-6 m-2 rounded-lg border border-gray-300"
+                    dropdownStyle="p-5 py-6 m-2 rounded-sm border border-gray"
                 />
-                <TextInput value={perAddress?.pincode} onChangeText={(value) => setPerAddress({ ...perAddress, pincode: value })} textAlign='center' placeholder='Pin Code' className="p-3 m-2 rounded-lg border border-gray-300" keyboardType='numeric' maxLength={4} />
+                <TextInput value={perAddress?.pincode} onChangeText={(value) => setPerAddress({ ...perAddress, pincode: value })} textAlign='center' placeholder='Pin Code' className="p-3 m-2 rounded-sm border border-gray" keyboardType='numeric' maxLength={4} />
             </View>
             <DynamicButton
                 btnText="Next"
